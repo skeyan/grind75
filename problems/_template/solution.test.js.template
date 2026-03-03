@@ -1,0 +1,9 @@
+import { describe, it } from "node:test";
+import assert from "node:assert";
+import { solve } from "./solution.js";  // ← update function name
+
+describe("Problem Name", () => {
+  it("basic case", () => {
+    assert.strictEqual(solve(/* input */), /* expected */);
+  });
+});
