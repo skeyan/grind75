@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --test problems/",
     "test:watch": "node --test --watch problems/",
+    "build": "node scripts/build-index.js",
     "run": "node"
   },
   "keywords": ["dsa", "leetcode", "grind75", "algorithms"],
