@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "number": 1,
+    "difficulty": "Easy",
+    "topics": [
+      "Array",
+      "Hash Table"
+    ],
+    "leetcode": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "slug": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "number": 20,
+    "difficulty": "Easy",
+    "topics": [
+      "String",
+      "Stack"
+    ],
+    "leetcode": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "slug": "merge-two-sorted-lists",
+    "title": "Merge Two Sorted Lists",
+    "number": 21,
+    "difficulty": "Easy",
+    "topics": [
+      "Linked List",
+      "Recursion"
+    ],
+    "leetcode": "https://leetcode.com/problems/merge-two-sorted-lists/"
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "number": 121,
+    "difficulty": "Easy",
+    "topics": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  }
+]
