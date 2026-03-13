@@ -58,4 +58,4 @@ function isPalindrome(s) {
 
 ## Practice Notes
 
-- _Add your own notes here: edge cases, gotchas, alternative approaches..._
+- The preprocessing version is more intutive so I would probably do that in an interview if I was surprised
