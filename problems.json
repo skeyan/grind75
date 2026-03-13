@@ -42,5 +42,16 @@
       "Dynamic Programming"
     ],
     "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "slug": "valid-palindrome",
+    "title": "Valid Palindrome",
+    "number": 125,
+    "difficulty": "Easy",
+    "topics": [
+      "Two Pointers",
+      "String"
+    ],
+    "leetcode": "https://leetcode.com/problems/valid-palindrome/"
   }
 ]
