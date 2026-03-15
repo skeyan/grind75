@@ -256,7 +256,9 @@ body {
 .content {
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 32px;
+  min-width: 0;
 }
 
 .content-pane { display: none; }
@@ -302,6 +304,7 @@ body {
   margin: 12px 0;
   border-radius: var(--radius);
   overflow-x: auto;
+  max-width: 100%;
 }
 
 .markdown-body pre code {
@@ -312,6 +315,7 @@ body {
   border-radius: var(--radius);
   font-size: 0.82rem;
   line-height: 1.55;
+  min-width: min-content;
 }
 
 .markdown-body table {
@@ -344,6 +348,7 @@ body {
 .solution-code pre {
   border-radius: var(--radius);
   overflow-x: auto;
+  max-width: 100%;
 }
 
 .solution-code pre code {
@@ -352,6 +357,7 @@ body {
   background: #0d1117;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  min-width: min-content;
 }
 
 /* ---- Empty state ---- */
@@ -420,6 +426,8 @@ body {
   .overlay.show { display: block; }
 
   .content { padding: 20px 16px; }
+  .markdown-body pre,
+  .solution-code pre { -webkit-overflow-scrolling: touch; }
   .main-header {
     padding: 12px 16px;
     flex-wrap: wrap;
