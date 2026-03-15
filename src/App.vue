@@ -3,7 +3,8 @@ import { ref, computed, watch, onMounted } from "vue";
 import Sidebar from "./components/Sidebar.vue";
 import MainContent from "./components/MainContent.vue";
 
-const BASE = import.meta.env.BASE_URL || "/";
+// Ensure trailing slash for fetch paths (e.g. /grind75/ on GitHub Pages)
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/*$/, "/");
 const problems = ref([]);
 const activeSlug = ref(null);
 const activeFilter = ref("all");

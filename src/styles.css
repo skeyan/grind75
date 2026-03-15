@@ -164,6 +164,11 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+}
+
+.main-title-area {
+  min-width: 0;
 }
 
 .main-title-area h2 {
@@ -179,9 +184,16 @@ body {
 
 .main-badges {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: 4px;
   align-items: center;
+}
+
+.badge,
+.badge-topic {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .badge {
@@ -214,6 +226,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: all 0.15s;
+  flex-shrink: 0;
 }
 .lc-link:hover { background: rgba(88,166,255,0.1); border-color: var(--accent); }
 
@@ -407,7 +420,15 @@ body {
   .overlay.show { display: block; }
 
   .content { padding: 20px 16px; }
-  .main-header { padding: 12px 16px; }
+  .main-header {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .main-header-inner { flex: 1 1 100%; min-width: 0; }
+  .main-title-area { flex: 1; min-width: 0; }
+  .lc-link { margin-top: 2px; }
   .tabs { padding: 0 16px; }
 }
 
