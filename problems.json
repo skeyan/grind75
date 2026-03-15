@@ -53,5 +53,18 @@
       "String"
     ],
     "leetcode": "https://leetcode.com/problems/valid-palindrome/"
+  },
+  {
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "number": 226,
+    "difficulty": "Easy",
+    "topics": [
+      "Tree",
+      "Breadth-First Search",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "leetcode": "https://leetcode.com/problems/invert-binary-tree/"
   }
 ]
