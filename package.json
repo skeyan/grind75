@@ -6,9 +6,20 @@
   "scripts": {
     "test": "node --test problems/",
     "test:watch": "node --test --watch problems/",
-    "build": "node scripts/build-index.js",
+    "build": "node scripts/build-index.js && node scripts/copy-for-vite.js && vite build",
+    "dev": "node scripts/build-index.js && node scripts/copy-for-vite.js && vite",
+    "preview": "vite preview --base /grind75/",
     "run": "node"
   },
   "keywords": ["dsa", "leetcode", "grind75", "algorithms"],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0",
+    "marked": "^15.0.7",
+    "vue": "^3.5.13"
+  }
 }

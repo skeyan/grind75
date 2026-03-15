@@ -11,14 +11,17 @@ problems/<slug>/
   solution.test.js — tests (optional)
 ```
 
-`problems.json` is the generated index used by `index.html`.
+`problems.json` is the generated index used by the Vite app (see `src/`).
 
 ## Build
 
-Requires **Node 20+** (no external dependencies).
+Requires **Node 20+**.
 
 ```bash
-# rebuild problems.json from notes.md metadata
+# install dependencies
+npm install
+
+# build problem index, copy to public/, and build Vite app → dist/
 npm run build
 
 # run tests
@@ -27,7 +30,10 @@ npm test
 # run tests in watch mode
 npm run test:watch
 
-# run local server
-npx serve
+# dev server (rebuilds index + copies to public, then starts Vite)
+npm run dev
+
+# preview production build locally (with base /grind75/)
+npm run preview
 ```
 

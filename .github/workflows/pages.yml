@@ -27,14 +27,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build problem index
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
         run: npm run build
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
       - name: Deploy
         id: deployment

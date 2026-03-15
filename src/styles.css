@@ -160,6 +160,12 @@ body {
   flex-shrink: 0;
 }
 
+.main-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .main-title-area h2 {
   font-size: 1.25rem;
   font-weight: 600;
