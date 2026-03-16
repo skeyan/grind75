@@ -66,5 +66,17 @@
       "Binary Tree"
     ],
     "leetcode": "https://leetcode.com/problems/invert-binary-tree/"
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "number": 242,
+    "difficulty": "Easy",
+    "topics": [
+      "Hash Table",
+      "String",
+      "Sorting"
+    ],
+    "leetcode": "https://leetcode.com/problems/valid-anagram/"
   }
 ]
