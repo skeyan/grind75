@@ -33,7 +33,10 @@ Start from `(sr, sc)`, record the original color, and BFS: for each cell, set it
 
 ## Key Insights
 
-- Three conditions before enqueuing a neighbor: in bounds, matches `originalColor`, and not already visited. The third is implicit: we don't use a visited set because we overwrite each pixel with `color` as soon as we process it. After that, that cell's value is `color`, so for any future check `image[i][j] === originalColor` is false and we never enqueue it again since it's no longer the same as the OG color and doesn't qualify to be part of the "flood" anymore. The grid itself acts as the visited marker—"filled" and "not originalColor" are the same thing.
+- Three conditions before enqueuing a neighbor: 
+    - In bounds
+    - Matches `originalColor`
+    - Not already visited. This one is implicit: we don't use a manual visited set because we overwrite each pixel with `color` as soon as we process it. After that, that cell's value is `color`, so for any future check `image[i][j] === originalColor` is false and we never enqueue it again since it's no longer the same as the OG color and doesn't qualify to be part of the "flood" anymore. The grid itself acts as the visited marker - "filled" and "not originalColor" are the same thing.
 - Moving the color check into `isValid` filters bad neighbors before they enter the queue, so the dequeue-time check can be dropped and the loop body stays simple.
 - DFS (stack or recursion) is equivalent in time/space; BFS is a clear way to express “spread from start.”
 
