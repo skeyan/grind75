@@ -78,5 +78,16 @@
       "Sorting"
     ],
     "leetcode": "https://leetcode.com/problems/valid-anagram/"
+  },
+  {
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "number": 704,
+    "difficulty": "Easy",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ],
+    "leetcode": "https://leetcode.com/problems/binary-search/"
   }
 ]

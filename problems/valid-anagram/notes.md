@@ -8,7 +8,11 @@
 
 Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
 
-## Approach 1: Sort & Compare — \(O(n \log n)\) time, \(O(n)\) space
+## Approach 1: Sort & Compare
+
+Clean and simple. Need `.split()` first since strings don't have a sort method. The `if`/`return true`/`return false` pattern can just be a direct return of the comparison.
+
+### Solution
 
 ```javascript
 var isAnagram = function(s, t) {
@@ -18,9 +22,13 @@ var isAnagram = function(s, t) {
 };
 ```
 
-Clean and simple. Need `.split()` first since strings don't have a sort method. The `if`/`return true`/`return false` pattern can just be a direct return of the comparison.
+**Complexity:** O(n log n) time, O(n) space.
 
-## Approach 2: Fixed Frequency Array — \(O(n)\) time, \(O(1)\) space
+## Approach 2: Fixed Frequency Array
+
+Best of both worlds, but only valid when input is guaranteed lowercase English letters.
+
+### Solution
 
 ```javascript
 var isAnagram = function(s, t) {
@@ -37,9 +45,13 @@ var isAnagram = function(s, t) {
 };
 ```
 
-Best of both worlds, but only valid when input is guaranteed lowercase English letters.
+**Complexity:** O(n) time, O(1) space.
 
-## Approach 3: Frequency Map — \(O(n)\) time, \(O(n)\) space
+## Approach 3: Frequency Map
+
+Slightly worse space than the array, but handles unicode and arbitrary character sets.
+
+### Solution
 
 ```javascript
 var isAnagram = function(s, t) {
@@ -56,14 +68,14 @@ var isAnagram = function(s, t) {
 };
 ```
 
-Slightly worse space than the array, but handles unicode and arbitrary character sets.
+**Complexity:** O(n) time, O(n) space.
 
 ## Key Insights
 
-- Sort is cleanest to write, fixed array is most efficient under constrained input, map is most flexible
-- The early `s.length !== t.length` check in approaches 2 and 3 is a free short-circuit
-- The fixed array trick (`charCodeAt(i) - 97`) maps `'a'`–`'z'` to indices `0`–`25`
+- Sort is cleanest to write, fixed array is most efficient under constrained input, map is most flexible.
+- The early `s.length !== t.length` check in approaches 2 and 3 is a free short-circuit.
+- The fixed array trick (`charCodeAt(i) - 97`) maps `'a'`–`'z'` to indices `0`–`25`.
 
 ## Practice Notes
 
-- Main approach: Sort & Compare — easiest to remember and write quickly
+- Main approach: Sort & Compare — easiest to remember and write quickly.
