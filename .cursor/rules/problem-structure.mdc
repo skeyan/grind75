@@ -1,0 +1,44 @@
+---
+description: Grind75 problem folder structure — one folder per problem with notes, solution, and tests
+globs: problems/**/*
+alwaysApply: false
+---
+
+# Problem Structure (Grind75)
+
+When adding or editing problems under `problems/`, keep this structure. Each problem lives in its own folder.
+
+## Folder and files
+
+- **Folder name:** `problems/<problem-slug>/` — use kebab-case (e.g. `binary-search`, `valid-anagram`).
+- **Required files in that folder:**
+  - `notes.md`
+  - `solution.js`
+  - `solution.test.js`
+
+## notes.md
+
+- **Title:** Problem name (e.g. `# Binary Search`).
+- **Metadata block:** `**Difficulty:**`, `**Topics:**`, `**LeetCode:**` with link to the problem.
+- **Sections:** `## Problem`, `## Approach` (or `## Approach: …`), optional `## Key Insights`, `## Practice Notes`.
+- Include a concise problem statement, approach explanation, and time/space complexity. Optionally include a code block of the solution and bullet insights/practice notes.
+
+## solution.js
+
+- **File comment:** LeetCode number and title, problem URL, one-line problem description.
+- **JSDoc:** `@param` and `@return` (or `@returns`) for the solution function.
+- **Export:** One named export (e.g. `export function search(nums, target)`). Function name should match the problem (e.g. `search` for Binary Search).
+- No default export; use the named export that the tests import.
+
+## solution.test.js
+
+- **Imports:** `describe`, `it` from `"node:test"`, `assert` from `"node:assert"`, and the solution from `"./solution.js"`.
+- **Structure:** Single `describe("Problem Name", () => { … })` with multiple `it("descriptive case", () => { … })` tests.
+- **Assertions:** Use `assert.strictEqual` (or other `assert` methods) with clear inputs and expected outputs.
+- Cover: typical case, edge cases (empty input, single element, boundaries), and failure/not-found cases where relevant.
+
+## Template
+
+To start a new problem, copy from `problems/_template/` (use `solution.test.js.template` and rename to `solution.test.js`), then replace placeholders with the real problem name, slug, and function name.
+
+Always run `npm run build` to regenerate problems.json afterwards, followed by `npm test`.
