@@ -21,7 +21,7 @@ Given an `image` (2D array of integers), a starting pixel `(sr, sc)`, and a `col
 
 ## Approach: Iterative BFS using a queue
 
-Start from `(sr, sc)`, record the original color, and BFS: for each cell, set it to the new color and enqueue valid neighbors. A neighbor is valid if it’s in bounds and has the same value as the original color. No separate visited set is needed: we mutate the grid when we process a cell (set it to `color`), so when that cell is later considered as a neighbor of another pixel, `image[i][j]` is no longer `originalColor` so isn't part of the floodfill anymore and `isValid` returns false.
+Start from `(sr, sc)`, record the original color, and BFS: for each cell, set it to the new color and enqueue valid neighbors. A neighbor is valid if it’s in bounds and has the same value as the `originalColor`. No separate visited set is needed: we mutate the grid when we process a cell (set it to `color`), so when that cell is later considered as a neighbor of another pixel, `image[i][j]` is no longer `originalColor` (we know `originalColor !== color` at this point due to an early return), so it isn't part of the floodfill anymore and `isValid` returns false.
 
 ### Key details / gotchas
 
@@ -36,7 +36,7 @@ Start from `(sr, sc)`, record the original color, and BFS: for each cell, set it
 - Three conditions before enqueuing a neighbor: 
     - In bounds
     - Matches `originalColor`
-    - Not already visited. This one is implicit: we don't use a manual visited set because we overwrite each pixel with `color` as soon as we process it. After that, that cell's value is `color`, so for any future check `image[i][j] === originalColor` is false and we never enqueue it again since it's no longer the same as the OG color and doesn't qualify to be part of the "flood" anymore. The grid itself acts as the visited marker - "filled" and "not originalColor" are the same thing.
+    - Not already visited. This one is implicit: we don't use a manual visited set because we overwrite each pixel with `color` as soon as we process it. After that, that cell's value is `color`, so for any future check `image[i][j] === originalColor` is false and we never enqueue it again since it's no longer the same as the OG color and doesn't qualify to be part of the "flood" anymore. The grid itself acts as the visited marker -"filled" and "not originalColor" are the same thing.
 - Moving the color check into `isValid` filters bad neighbors before they enter the queue, so the dequeue-time check can be dropped and the loop body stays simple.
 - DFS (stack or recursion) is equivalent in time/space; BFS is a clear way to express “spread from start.”
 
