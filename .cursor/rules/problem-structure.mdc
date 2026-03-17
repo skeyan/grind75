@@ -21,7 +21,7 @@ When adding or editing problems under `problems/`, keep this structure. Each pro
 - **Title:** Problem name (e.g. `# Binary Search`).
 - **Metadata block:** `**Difficulty:**`, `**Topics:**`, `**LeetCode:**` with link to the problem.
 - **Sections:** `## Problem`, `## Approach` (or `## Approach: …`), optional `## Key Insights`, `## Practice Notes`.
-- Include a concise problem statement, approach explanation, and time/space complexity. Optionally include a code block of the solution and bullet insights/practice notes.
+- Include a concise problem statement, approach explanation, and time/space complexity. Do not duplicate the solution code in notes — the canonical implementation lives in `solution.js`. Use bullet insights/practice notes as needed.
 
 ## solution.js
 

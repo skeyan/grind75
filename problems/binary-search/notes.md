@@ -19,29 +19,6 @@ At every step, `[left, right]` represents the range where the target could still
 - Use `middle + 1` / `middle - 1` to actually advance the pointers (otherwise you can get stuck).
 - Loop condition is **`left <= right`** — so you don't skip the last remaining candidate.
 
-### Solution
-
-```javascript
-var search = function(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
-
-    while (left <= right) {
-        const middle = Math.floor((right - left) / 2) + left;
-        const curMiddle = nums[middle];
-        if (curMiddle === target) {
-            return middle;
-        } else if (curMiddle > target) {
-            right = middle - 1;
-        } else if (curMiddle < target) {
-            left = middle + 1;
-        }
-    }
-
-    return -1;
-};
-```
-
 **Complexity:** O(log n) time, O(1) space — you're halving the search space each iteration.
 
 ## Key Insights

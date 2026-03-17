@@ -28,12 +28,6 @@ _Brief paragraph: what’s the main idea? What invariant or structure are you us
 - _Important implementation detail or edge case._
 - _Another pitfall or invariant to remember._
 
-### Solution
-
-```javascript
-// Your solution code here
-```
-
 **Complexity:** O(?) time, O(?) space — _one-line justification._
 
 ## Key Insights
