@@ -68,6 +68,19 @@
     "leetcode": "https://leetcode.com/problems/invert-binary-tree/"
   },
   {
+    "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "number": 235,
+    "difficulty": "Medium",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+  },
+  {
     "slug": "valid-anagram",
     "title": "Valid Anagram",
     "number": 242,
