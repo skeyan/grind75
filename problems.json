@@ -33,6 +33,18 @@
     "leetcode": "https://leetcode.com/problems/merge-two-sorted-lists/"
   },
   {
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "number": 53,
+    "difficulty": "Medium",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Divide and Conquer"
+    ],
+    "leetcode": "https://leetcode.com/problems/maximum-subarray/"
+  },
+  {
     "slug": "best-time-to-buy-and-sell-stock",
     "title": "Best Time to Buy and Sell Stock",
     "number": 121,
