@@ -35,3 +35,4 @@ A stack is optional here (only one child is ever pushed per step); it matches an
 ## Practice Notes
 
 - Compare with LCA in a general binary tree (236): there you typically need post-order recursion or parent pointers, not value comparisons at each step.
+- See https://www.puppygraph.com/blog/depth-first-search-vs-breadth-first-search for good pseudocode for DFS and BFS
