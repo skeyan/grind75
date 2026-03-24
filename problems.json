@@ -45,6 +45,17 @@
     "leetcode": "https://leetcode.com/problems/maximum-subarray/"
   },
   {
+    "slug": "insert-interval",
+    "title": "Insert Interval",
+    "number": 57,
+    "difficulty": "Medium",
+    "topics": [
+      "Array",
+      "Sorting"
+    ],
+    "leetcode": "https://leetcode.com/problems/insert-interval/"
+  },
+  {
     "slug": "best-time-to-buy-and-sell-stock",
     "title": "Best Time to Buy and Sell Stock",
     "number": 121,
