@@ -116,6 +116,19 @@
     "leetcode": "https://leetcode.com/problems/valid-anagram/"
   },
   {
+    "slug": "01-matrix",
+    "title": "01 Matrix",
+    "number": 542,
+    "difficulty": "Medium",
+    "topics": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "leetcode": "https://leetcode.com/problems/01-matrix/"
+  },
+  {
     "slug": "binary-search",
     "title": "Binary Search",
     "number": 704,
