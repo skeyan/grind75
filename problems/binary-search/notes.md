@@ -6,7 +6,7 @@
 
 ## Problem
 
-Given a sorted array of integers `nums` and a target value, return the index of the target if it exists; otherwise return `-1`. You must use \(O(\log n)\) runtime complexity.
+Given a sorted array of integers `nums` and a target value, return the index of the target if it exists; otherwise return `-1`. You must use O(log n) runtime complexity.
 
 ## Approach: Classic Binary Search
 
@@ -19,7 +19,8 @@ At every step, `[left, right]` represents the range where the target could still
 - Use `middle + 1` / `middle - 1` to actually advance the pointers (otherwise you can get stuck).
 - Loop condition is **`left <= right`** — so you don't skip the last remaining candidate.
 
-**Complexity:** O(log n) time, O(1) space — you're halving the search space each iteration.
+- **Time Complexity:** O(log n) - Each step halves the search window (n is `nums.length`).
+- **Space Complexity:** O(1) - Only index variables; no auxiliary structures.
 
 ## Key Insights
 

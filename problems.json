@@ -56,6 +56,18 @@
     "leetcode": "https://leetcode.com/problems/insert-interval/"
   },
   {
+    "slug": "balanced-binary-tree",
+    "title": "Balanced Binary Tree",
+    "number": 110,
+    "difficulty": "Easy",
+    "topics": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "leetcode": "https://leetcode.com/problems/balanced-binary-tree/"
+  },
+  {
     "slug": "best-time-to-buy-and-sell-stock",
     "title": "Best Time to Buy and Sell Stock",
     "number": 121,

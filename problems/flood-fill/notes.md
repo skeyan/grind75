@@ -29,7 +29,8 @@ Start from `(sr, sc)`, record the original color, and BFS: for each cell, set it
 - **Check against `originalColor`, not `color`:** The region to fill is “everything connected with the same color as the start.” Checking `curColor !== color` would incorrectly include any pixel that isn’t the target color.
 - **Validation in `isValid`:** Doing in-bounds and `image[i][j] === originalColor` in a helper keeps the queue free of invalid cells and simplifies the loop (no need for a redundant check after dequeue).
 
-**Complexity:** O(m×n) time and O(m×n) space in the worst case, when every pixel is enqueued.
+- **Time Complexity:** O(m×n) - Each pixel is enqueued at most once in the worst case (m×n grid).
+- **Space Complexity:** O(m×n) - Queue can hold many cells when the region spans the whole image.
 
 ## Key Insights
 

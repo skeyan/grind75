@@ -22,7 +22,8 @@ var isAnagram = function(s, t) {
 };
 ```
 
-**Complexity:** O(n log n) time, O(n) space.
+- **Time Complexity:** O(n log n) - Sorting dominates (n is string length).
+- **Space Complexity:** O(n) - Sorted character arrays or joined strings.
 
 ## Approach 2: Fixed Frequency Array
 
@@ -45,7 +46,8 @@ var isAnagram = function(s, t) {
 };
 ```
 
-**Complexity:** O(n) time, O(1) space.
+- **Time Complexity:** O(n) - One pass over both strings (n is length).
+- **Space Complexity:** O(1) - Fixed array of 26 counters (lowercase English letters only).
 
 ## Approach 3: Frequency Map
 
@@ -68,7 +70,8 @@ var isAnagram = function(s, t) {
 };
 ```
 
-**Complexity:** O(n) time, O(n) space.
+- **Time Complexity:** O(n) - One pass over both strings (n is length).
+- **Space Complexity:** O(n) - Map holds at most one entry per distinct character.
 
 ## Key Insights
 

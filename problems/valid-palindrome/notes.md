@@ -12,8 +12,8 @@ Given a string `s`, return `true` if it is a **palindrome** after converting all
 
 - Strip the string down to only lowercase alphanumeric characters, then use two pointers from each end moving inward
 - If every pair matches, it's a palindrome; one mismatch is enough to return `false`
-- **Time Complexity:** \(O(n)\) — one pass to clean, one pass to compare  
-- **Space Complexity:** \(O(n)\) — the cleaned string is a new allocation
+- **Time Complexity:** O(n) - One pass to clean and one to compare (n is original length).
+- **Space Complexity:** O(n) - The cleaned string is a new allocation.
 
 ### Regex Reference
 
@@ -24,7 +24,7 @@ Given a string `s`, return `true` if it is a **palindrome** after converting all
 
 ## Alternative: Two Pointers Without Pre-processing
 
-Instead of building a cleaned copy of the string, skip non-alphanumeric characters in-place during the pointer walk. This avoids the \(O(n)\) extra space:
+Instead of building a cleaned copy of the string, skip non-alphanumeric characters in-place during the pointer walk. This avoids the O(n) extra string:
 
 ```javascript
 function isPalindrome(s) {
@@ -47,14 +47,14 @@ function isPalindrome(s) {
 }
 ```
 
-- **Time Complexity:** \(O(n)\) — each character visited at most once  
-- **Space Complexity:** \(O(1)\) — no extra string created
+- **Time Complexity:** O(n) - Each index is visited at most once (n is length).
+- **Space Complexity:** O(1) - Only two pointers; no extra string for the cleaned form.
 
 ## Key Insights
 
-- The pre-processing version is simpler to read and write; the in-place version trades readability for \(O(1)\) space
+- The pre-processing version is simpler to read and write; the in-place version trades readability for O(1) space
 - `[^a-z0-9]` (with the caret) matches non-alphanumeric; `[a-z0-9]` (without) matches alphanumeric — the `^` inside a character class is what flips the meaning
-- Both approaches are \(O(n)\) time, so the choice comes down to whether the extra space matters
+- Both approaches are O(n) time, so the choice comes down to whether the extra space matters
 
 ## Practice Notes
 

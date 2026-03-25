@@ -19,8 +19,8 @@ You don’t “move” the leftmost node to the rightmost or think about the who
   - If `left` exists, enqueue it; if `right` exists, enqueue it.
 - Return `root`.
 
-**Time:** \(O(n)\) — each node is visited once.  
-**Space:** \(O(n)\) — queue can hold up to the widest level (e.g. up to \(n/2\) nodes in a full tree).
+- **Time Complexity:** O(n) - Each node is visited once (n is number of nodes).
+- **Space Complexity:** O(n) - Queue holds at most one full level; in a perfect tree the last level has about n/2 nodes, so worst-case queue size is O(n).
 
 ### Summary of the insight
 
@@ -32,7 +32,7 @@ You’re not “replacing the leftmost with the rightmost” — that’s taken 
 
 ### Recursive (DFS) alternative
 
-At each node: swap `left` and `right`, then recursively invert `left` and `right`. Base case: `if (!root) return null`. Same \(O(n)\) time; space is \(O(h)\) for the call stack.
+At each node: swap `left` and `right`, then recursively invert `left` and `right`. Base case: `if (!root) return null`. Same O(n) time; space is O(h) for the call stack (h is height).
 
 ### Queue and Stack in JavaScript
 

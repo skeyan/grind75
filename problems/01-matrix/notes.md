@@ -14,9 +14,8 @@ Treat every `0` as BFS layer 0. Enqueue all `0`s with distance `0`; keep a `dist
 
 **Why first visit = shortest distance:** BFS expands by increasing distance. All sources start at layer 0; each edge adds 1. A longer path would reach the same cell in a later layer, so the first time a cell is set, it is optimal.
 
-**Complexity:** 
-- O(m×n) time — each cell enters the queue at most once. 
-- O(m×n) space — distance map plus queue in the worst case.
+- **Time Complexity:** O(m×n) - Each cell enters the queue at most once (grid has m rows and n columns).
+- **Space Complexity:** O(m×n) - Distance map plus queue in the worst case.
 
 ## Key Insights
 

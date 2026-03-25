@@ -22,8 +22,8 @@ A string is valid if:
   - If the stack is empty when we need to pop, or the types don’t match, return `false`
 - At the end, the string is valid only if the stack is empty (all opens have been closed)
 
-- **Time Complexity:** \(O(n)\) — single pass through the string  
-- **Space Complexity:** \(O(n)\) in the worst case (all opening brackets go on the stack)
+- **Time Complexity:** O(n) - Single pass through `s` (n is length).
+- **Space Complexity:** O(n) - Stack holds all opening brackets in the worst case (e.g. `"(((..."`).
 
 ## Practice Notes
 

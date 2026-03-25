@@ -25,7 +25,8 @@ A stack is optional here (only one child is ever pushed per step); it matches an
 - Again, the reason why we can use the check for `p` and `q`'s `val` compared to the current node's `val` is because in BST, only 1 node can meet that criteria and be considered the LCA as it's the only node where `p` and `q` are on different sides of the tree. 
 - This logic relies on the **BST property**; the same split idea does not apply to an arbitrary binary tree (that problem needs a different approach).
 
-**Complexity:** O(h) time where h is height, O(1) extra space if you use a single pointer instead of a stack (stack depth is still O(h)).
+- **Time Complexity:** O(h) - Walk from root toward the split; h is tree height.
+- **Space Complexity:** O(1) - Constant extra memory with a single moving pointer (an explicit stack would be O(h) frames).
 
 ## Key Insights
 

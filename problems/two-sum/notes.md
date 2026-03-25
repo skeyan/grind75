@@ -13,7 +13,8 @@ Given an array of integers `nums` and an integer `target`, return *indices of th
 - Iterate through array, for each num compute `complement = target - num`
 - Use Map to store `{ num → index }` as we go
 - If complement already in map → return `[map.get(complement), i]`
-- Time: O(n), Space: O(n)
+- **Time Complexity:** O(n) - One pass; each index looked up at most once (n is `nums.length`).
+- **Space Complexity:** O(n) - Map stores up to n − 1 values before finding the pair.
 
 ## Key Insights
 

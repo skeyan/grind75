@@ -15,13 +15,13 @@ Given an array `prices` where `prices[i]` is the price of a given stock on the *
   - `maxProfit` — the best profit achievable so far
 - At each price, check if selling today beats the current best profit
 - If today's price is lower than `buyVal`, update it — any future sell should use this cheaper buy
-- **Time Complexity:** \(O(n)\) — single pass through the array  
-- **Space Complexity:** \(O(1)\) — only two variables
+- **Time Complexity:** O(n) - Single pass through `prices` (n is number of days).
+- **Space Complexity:** O(1) - Only `buyVal` and `maxProfit` (or equivalent).
 
 ## Key Insights
 
 - This is essentially finding the maximum difference `prices[j] - prices[i]` where `j > i`
-- Brute force would check all pairs in \(O(n^2)\); tracking the running minimum reduces it to \(O(n)\)
+- Brute force would check all pairs in O(n²); tracking the running minimum reduces it to O(n)
 - The greedy logic works because we only need one transaction — always buy at the cheapest point seen so far and check if today's sell is the best
 - If prices only decrease, `maxProfit` stays at `0` (no profitable transaction exists)
 

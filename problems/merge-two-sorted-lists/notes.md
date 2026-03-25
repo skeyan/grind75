@@ -18,15 +18,15 @@ Given the heads of two sorted linked lists `list1` and `list2`, merge them into 
 - When one list is exhausted, attach the remainder of the other list directly (it's already sorted)
 - Return `mergedListHead.next` to skip the dummy node
 
-- **Time Complexity:** \(O(n + m)\) — each node is visited exactly once  
-- **Space Complexity:** \(O(1)\) — no extra data structures; we re-link existing nodes
+- **Time Complexity:** O(n + m) - Each node from either list is appended once (n and m are list lengths).
+- **Space Complexity:** O(1) - Only pointer rewiring; no auxiliary containers.
 
 ## Key Insights
 
 - The **dummy head** pattern is essential for linked list problems — it eliminates `if (head === null)` checks and simplifies the code
 - After the main loop, at most one list still has remaining nodes; a single `if/else` handles both cases
 - This is the same merge step used inside **merge sort**, making it a foundational building block
-- A recursive approach also works (`O(n + m)` time but `O(n + m)` stack space), so the iterative version is preferred for constant space
+- A recursive approach also works (same time but O(n + m) call-stack space), so the iterative version is preferred for constant extra space
 
 ## Practice Notes
 

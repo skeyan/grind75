@@ -28,7 +28,8 @@ _Brief paragraph: what’s the main idea? What invariant or structure are you us
 - _Important implementation detail or edge case._
 - _Another pitfall or invariant to remember._
 
-**Complexity:** O(?) time, O(?) space — _one-line justification._
+- **Time Complexity:** O(?) - _Brief justification (n is …)._
+- **Space Complexity:** O(?) - _Brief justification._
 
 ## Key Insights
 
