@@ -18,7 +18,7 @@ export class MyQueue {
    * @return {void}
    */
   push(x) {
-    this.stack.push(x);
+    this.stack.push(x); // `push`
   }
 
   /**
@@ -26,14 +26,16 @@ export class MyQueue {
    */
   pop() {
     if (this.reversedStack.length) {
-      return this.reversedStack.pop();
+      // `!isEmpty`
+      return this.reversedStack.pop(); // `pop`
     }
 
     while (this.stack.length) {
-      const cur = this.stack.pop();
-      this.reversedStack.push(cur);
+      // `!isEmpty`
+      const cur = this.stack.pop(); // `pop`
+      this.reversedStack.push(cur); // `push`
     }
-    return this.reversedStack.pop();
+    return this.reversedStack.pop(); // `pop`
   }
 
   /**
@@ -41,21 +43,23 @@ export class MyQueue {
    */
   peek() {
     if (this.reversedStack.length) {
-      return this.reversedStack[this.reversedStack.length - 1];
+      // `!isEmpty`
+      return this.reversedStack[this.reversedStack.length - 1]; // `peek`
     }
 
     while (this.stack.length) {
-      const cur = this.stack.pop();
-      this.reversedStack.push(cur);
+      // `!isEmpty`
+      const cur = this.stack.pop(); // `pop`
+      this.reversedStack.push(cur); // `push`
     }
 
-    return this.reversedStack[this.reversedStack.length - 1];
+    return this.reversedStack[this.reversedStack.length - 1]; // `peek`
   }
 
   /**
    * @return {boolean}
    */
   empty() {
-    return this.stack.length === 0 && this.reversedStack.length === 0;
+    return this.stack.length === 0 && this.reversedStack.length === 0; // `isEmpty`
   }
 }
