@@ -30,8 +30,7 @@ export class MyQueue {
       return this.reversedStack.pop(); // `pop`
     }
 
-    while (this.stack.length) {
-      // `!isEmpty`
+    while (this.stack.length) { // `!isEmpty`
       const cur = this.stack.pop(); // `pop`
       this.reversedStack.push(cur); // `push`
     }
@@ -42,13 +41,11 @@ export class MyQueue {
    * @return {number}
    */
   peek() {
-    if (this.reversedStack.length) {
-      // `!isEmpty`
+    if (this.reversedStack.length) { // `!isEmpty`
       return this.reversedStack[this.reversedStack.length - 1]; // `peek`
     }
 
-    while (this.stack.length) {
-      // `!isEmpty`
+    while (this.stack.length) { // `!isEmpty`
       const cur = this.stack.pop(); // `pop`
       this.reversedStack.push(cur); // `push`
     }
