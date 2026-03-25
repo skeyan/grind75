@@ -103,6 +103,18 @@
     "leetcode": "https://leetcode.com/problems/invert-binary-tree/"
   },
   {
+    "slug": "implement-queue-using-stacks",
+    "title": "Implement Queue using Stacks",
+    "number": 232,
+    "difficulty": "Easy",
+    "topics": [
+      "Stack",
+      "Design",
+      "Queue"
+    ],
+    "leetcode": "https://leetcode.com/problems/implement-queue-using-stacks/"
+  },
+  {
     "slug": "lowest-common-ancestor-of-a-binary-search-tree",
     "title": "Lowest Common Ancestor of a Binary Search Tree",
     "number": 235,
