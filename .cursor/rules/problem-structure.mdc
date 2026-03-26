@@ -42,3 +42,5 @@ When adding or editing problems under `problems/`, keep this structure. Each pro
 To start a new problem, copy from `problems/_template/` (use `solution.test.js.template` and rename to `solution.test.js`), then replace placeholders with the real problem name, slug, and function name.
 
 Always run `npm run build` to regenerate problems.json afterwards, followed by `npm test`.
+
+After the new problem is committed (or when batching several new folders), run the Cursor command **`/update-journal`** (see `.cursor/commands/update-journal.md`) so `public/journal/` gets a day page and index entry for any `problems/<slug>/` first added that calendar day.

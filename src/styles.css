@@ -62,6 +62,19 @@ body {
   margin-top: 2px;
 }
 
+.sidebar-journal {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+.sidebar-journal:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 .filters {
   display: flex;
   gap: 6px;
@@ -214,6 +227,14 @@ body {
   color: var(--accent);
 }
 
+.main-header-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.journal-link,
 .lc-link {
   font-size: 0.8rem;
   color: var(--accent);
@@ -228,7 +249,22 @@ body {
   transition: all 0.15s;
   flex-shrink: 0;
 }
+.journal-link:hover,
 .lc-link:hover { background: rgba(88,166,255,0.1); border-color: var(--accent); }
+
+.empty-state-extra {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+.empty-journal-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.empty-journal-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
 
 .tabs {
   display: flex;
@@ -436,7 +472,7 @@ body {
   }
   .main-header-inner { flex: 1 1 100%; min-width: 0; }
   .main-title-area { flex: 1; min-width: 0; }
-  .lc-link { margin-top: 2px; }
+  .main-header-links { margin-top: 2px; }
   .tabs { padding: 0 16px; }
 }
 

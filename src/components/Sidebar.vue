@@ -4,6 +4,7 @@ defineProps({
   activeSlug: { type: String, default: null },
   problemCount: { type: Number, required: true },
   activeFilter: { type: String, default: "all" },
+  base: { type: String, default: "/" },
 });
 
 const emit = defineEmits(["select", "update:activeFilter"]);
@@ -30,6 +31,7 @@ function onKeydown(e, slug) {
     <div class="sidebar-header">
       <h1>Grind <span>75</span></h1>
       <p>{{ problemCount }} problem{{ problemCount !== 1 ? "s" : "" }}</p>
+      <a class="sidebar-journal" :href="`${base}journal/index.html`">Journal</a>
     </div>
     <div class="filters">
       <button

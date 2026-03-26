@@ -107,15 +107,18 @@ watch(
           </div>
         </div>
       </div>
-      <a
-        v-if="problem?.leetcode"
-        class="lc-link"
-        :href="problem.leetcode"
-        target="_blank"
-        rel="noopener"
-      >
-        LeetCode &nearr;
-      </a>
+      <div class="main-header-links">
+        <a class="journal-link" :href="`${base}journal/index.html`">Journal</a>
+        <a
+          v-if="problem?.leetcode"
+          class="lc-link"
+          :href="problem.leetcode"
+          target="_blank"
+          rel="noopener"
+        >
+          LeetCode &nearr;
+        </a>
+      </div>
     </div>
     <div v-if="problem" class="tabs">
       <button
@@ -156,6 +159,11 @@ watch(
           <polyline points="10 9 9 9 8 9" />
         </svg>
         <p>Choose a problem from the sidebar to begin</p>
+        <p class="empty-state-extra">
+          <a class="empty-journal-link" :href="`${base}journal/index.html`"
+            >Practice journal by day</a
+          >
+        </p>
       </div>
       <template v-else>
         <div

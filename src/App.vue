@@ -69,6 +69,7 @@ watch(
       :active-slug="activeSlug"
       :problem-count="problems.length"
       :active-filter="activeFilter"
+      :base="BASE"
       :class="{ open: sidebarOpen }"
       @update:active-filter="activeFilter = $event"
       @select="selectProblem"
