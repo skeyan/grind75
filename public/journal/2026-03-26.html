@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026-03-26 — Journal — Grind 75</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./journal.css" />
+</head>
+<body>
+  <div class="journal-wrap">
+    <nav class="top"><a href="./index.html">← All days</a> · <a href="../index.html">Problems</a></nav>
+    <h1>Thursday, March 26, 2026</h1>
+    <p class="sub">First commits under <code>problems/binary-tree-level-order-traversal/</code>.</p>
+    <article class="entry">
+      <h2><a href="../index.html#binary-tree-level-order-traversal">Binary Tree Level Order Traversal</a></h2>
+      <p>Breadth-first search with a queue of <code>[level, node]</code> pairs so each dequeued node knows its depth. Append each value to that level’s row (or start a new row), then enqueue left and right children with <code>level + 1</code>.</p>
+    </article>
+    <footer class="nav-footer">
+      <a href="./index.html">Journal index</a>
+      <a href="../index.html">Problem browser</a>
+    </footer>
+  </div>
+</body>
+</html>
