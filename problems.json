@@ -128,6 +128,19 @@
     "leetcode": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
   },
   {
+    "slug": "binary-tree-postorder-traversal",
+    "title": "Binary Tree Postorder Traversal",
+    "number": 145,
+    "difficulty": "Easy",
+    "topics": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "leetcode": "https://leetcode.com/problems/binary-tree-postorder-traversal/"
+  },
+  {
     "slug": "invert-binary-tree",
     "title": "Invert Binary Tree",
     "number": 226,

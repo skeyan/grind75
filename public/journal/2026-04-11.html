@@ -13,10 +13,14 @@
   <div class="journal-wrap">
     <nav class="top"><a href="./index.html">← All days</a> · <a href="../index.html">Problems</a></nav>
     <h1>Saturday, April 11, 2026</h1>
-    <p class="sub">First commit under <code>problems/binary-tree-inorder-traversal/</code>.</p>
+    <p class="sub">First commits under <code>problems/binary-tree-inorder-traversal/</code>, <code>problems/binary-tree-postorder-traversal/</code>.</p>
     <article class="entry">
       <h2><a href="../index.html#binary-tree-inorder-traversal">Binary Tree Inorder Traversal</a></h2>
       <p>Iterative DFS walks left as far as possible while pushing ancestors, then pops to emit the node value and steps into the right subtree. When the current pointer is null but the stack is not, each pop resumes the next step of left-root-right order.</p>
+    </article>
+    <article class="entry">
+      <h2><a href="../index.html#binary-tree-postorder-traversal">Binary Tree Postorder Traversal</a></h2>
+      <p>One stack walks the left spine; then the algorithm peeks at the top node and either descends into an unfinished right subtree or pops and records the value, using <code>lastVisited</code> so it does not treat a completed right child as new work. That yields left-right-root without recursion.</p>
     </article>
     <footer class="nav-footer">
       <a href="./index.html">Journal index</a>
