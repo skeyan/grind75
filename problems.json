@@ -56,6 +56,19 @@
     "leetcode": "https://leetcode.com/problems/insert-interval/"
   },
   {
+    "slug": "binary-tree-inorder-traversal",
+    "title": "Binary Tree Inorder Traversal",
+    "number": 94,
+    "difficulty": "Easy",
+    "topics": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+  },
+  {
     "slug": "binary-tree-level-order-traversal",
     "title": "Binary Tree Level Order Traversal",
     "number": 102,
