@@ -8,15 +8,16 @@
 
 Given the `root` of a binary tree, return the inorder traversal of its nodes' values (left subtree, then root, then right subtree).
 
-## Approach: Iterative DFS with a stack
+## Approach: Iterative DFS with a stack (three cases)
 
-- Walk left from the current node, pushing each node on the stack until there is no left child.
-- Pop the top node, record its value, then treat its right child as the new current node and repeat.
-- When the current pointer is null but the stack is not, popping continues the traversal up the tree.
+- **Case 1 —** `cur` has a left child: you are still descending the left spine, so push `cur` for later (its value is not ready yet) and move to `cur.left`.
+- **Case 2 —** `cur` exists but has no left child: you are at the leftmost unvisited node in this subtree, so append `cur.val`, then continue from `cur.right` (treat that subtree as the new focus).
+- **Case 3 —** `cur` is null: there was no right child to step into, so the current path is finished; pop the saved parent from the stack, append its value, then continue from its right child.
 
 - **Time Complexity:** O(n) - Each node is pushed and popped at most once.
 - **Space Complexity:** O(n) - Stack holds up to tree height; output is O(n) separately.
 
 ## Practice Notes
 
-- The inner “go all the way left” loop is the standard way to defer visiting a node until its left subtree is finished.
+- The stack holds nodes whose left branch has been handled but whose value has not been emitted yet.
+- Case 2 and Case 3 both “visit” a node and then move right; Case 3 is the unwind when you fell off a null right pointer.
